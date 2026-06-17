@@ -52,29 +52,30 @@ function App() {
       </h2>
 
       {/* Search Bar */}
-      <div className="flex flex-wrap gap-2 w-full max-w-md mb-4">
+      <div className="flex flex-col gap-2 w-full max-w-md mb-4">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => { if (e.key === "Enter") searchUser(); }}
-          placeholder="Cari profil user..."
-          className="flex-1 bg-slate-800 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          placeholder="Cari profil user.."
+          className="w-full bg-slate-800 border border-slate-600 text-white placeholder-slate-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
-
-        <button
-          onClick={searchUser}
-          disabled={loading}
-          className="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 font-medium shadow-md shadow-emerald-500/30 active:scale-95 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          Cari
-        </button>
-        <button
-          onClick={resetSearch}
-          className="bg-slate-700 text-slate-200 px-4 py-2 rounded-lg hover:bg-slate-600 active:scale-95 transition-all duration-150"
-        >
-          Reset
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={searchUser}
+            disabled={loading}
+            className="flex-1 bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 font-medium shadow-md shadow-emerald-500/30 active:scale-95 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Cari
+          </button>
+          <button
+            onClick={resetSearch}
+            className="flex-1 bg-slate-700 text-slate-200 px-4 py-2 rounded-lg hover:bg-slate-600 active:scale-95 transition-all duration-150"
+          >
+            Reset
+          </button>
+        </div>
       </div>
 
       <div>
