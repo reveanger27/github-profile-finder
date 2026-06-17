@@ -52,7 +52,7 @@ function App() {
       </h2>
 
       {/* Search Bar */}
-      <div className="flex gap-2 w-full max-w-md mb-4">
+      <div className="flex flex-wrap gap-2 w-full max-w-md mb-4">
         <input
           type="text"
           value={query}
