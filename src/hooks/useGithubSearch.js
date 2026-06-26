@@ -42,6 +42,7 @@ export function useGithubSearch() {
             setError("");
             setUser(null);
             setIsClosing(false);
+            setRepos([]);
             callback(); // manggil fungsi yang dikirim dari App.jsx
         }, 300);
         }
